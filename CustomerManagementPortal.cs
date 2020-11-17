@@ -29,9 +29,18 @@ namespace DispurWirelessCommunicationManagment
                         string address = Console.ReadLine();
                         Console.Write("Enter Email-id: ");
                         string mailId = Console.ReadLine();
+                        Console.Write("Enter Password: ");
+                        string password = Console.ReadLine();
+                        Console.Write("Confirm password: ");
+                        string confrimPass = Console.ReadLine();
+                        if(password != confrimPass)
+                        {
+                            Console.WriteLine("Passwords didnt match...\n\n");
+                            break;
+                        }
                         Console.Write("Enter contact details(if any): ");
                         long mob = long.Parse(Console.ReadLine());
-                        Customer c = new Customer(name, address, mailId, mob);
+                        Customer c = new Customer(name, address, mailId,password,mob);
                         Console.WriteLine("Please make a note of your Registration ID :" + c.RegistrationId);
                         Console.WriteLine("--------------------------------------------------------------------------");
                         break;
