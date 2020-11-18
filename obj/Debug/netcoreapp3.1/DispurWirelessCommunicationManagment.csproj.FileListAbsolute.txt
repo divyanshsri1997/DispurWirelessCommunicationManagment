@@ -9,3 +9,10 @@ D:\dispurWireless\DispurWirelessCommunicationManagment\obj\Debug\netcoreapp3.1\D
 D:\dispurWireless\DispurWirelessCommunicationManagment\obj\Debug\netcoreapp3.1\DispurWirelessCommunicationManagment.AssemblyInfo.cs
 D:\dispurWireless\DispurWirelessCommunicationManagment\obj\Debug\netcoreapp3.1\DispurWirelessCommunicationManagment.dll
 D:\dispurWireless\DispurWirelessCommunicationManagment\obj\Debug\netcoreapp3.1\DispurWirelessCommunicationManagment.pdb
+D:\dispurWireless\DispurWirelessCommunicationManagment\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+D:\dispurWireless\DispurWirelessCommunicationManagment\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+D:\dispurWireless\DispurWirelessCommunicationManagment\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+D:\dispurWireless\DispurWirelessCommunicationManagment\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+D:\dispurWireless\DispurWirelessCommunicationManagment\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\dispurWireless\DispurWirelessCommunicationManagment\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\dispurWireless\DispurWirelessCommunicationManagment\obj\Debug\netcoreapp3.1\DispurWirelessCommunicationManagment.csproj.CopyComplete

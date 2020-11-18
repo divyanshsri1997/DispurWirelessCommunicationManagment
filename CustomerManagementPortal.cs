@@ -41,12 +41,27 @@ namespace DispurWirelessCommunicationManagment
                         Console.Write("Enter contact details(if any): ");
                         long mob = long.Parse(Console.ReadLine());
                         Customer c = new Customer(name, address, mailId,password,mob);
+                        new CustomerDbAccessLayer().InsertintoCustomerTable(c);
                         Console.WriteLine("Please make a note of your Registration ID :" + c.RegistrationId);
                         Console.WriteLine("--------------------------------------------------------------------------");
                         break;
                     case 2:
                         Console.WriteLine("--------------------------------------------------------------------------");
-                        Console.WriteLine("Customer Details...\n\n");
+                        Console.WriteLine("........Relationship Manager........");
+                        Console.Write("Enter your ID: ");
+                        int rId = int.Parse(Console.ReadLine());
+                        Console.Write("Enter your password: ");
+                        string p = Console.ReadLine();
+                        if(rId == 505 && p.ToLower() == "rm")
+                        {
+                            Console.WriteLine("\n\n####Customer Details####\n");
+                            new CustomerDbAccessLayer().FetchCustomerData();
+                        }else
+                        {
+                            Console.WriteLine("Wrong credentials....");
+                            break;
+                        }
+                        
                         Console.WriteLine("--------------------------------------------------------------------------");
                         break;
                     case 3:
