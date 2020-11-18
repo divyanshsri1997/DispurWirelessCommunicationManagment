@@ -1,25 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\dispurWireless\\DispurWirelessCommunicationManagment\\DispurWirelessCommunicationManagment.csproj": {}
+    "C:\\Users\\YASH\\Source\\Repos\\DispurWirelessCommunicationManagment1\\DispurWirelessCommunicationManagment.csproj": {}
   },
   "projects": {
-    "D:\\dispurWireless\\DispurWirelessCommunicationManagment\\DispurWirelessCommunicationManagment.csproj": {
+    "C:\\Users\\YASH\\Source\\Repos\\DispurWirelessCommunicationManagment1\\DispurWirelessCommunicationManagment.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\dispurWireless\\DispurWirelessCommunicationManagment\\DispurWirelessCommunicationManagment.csproj",
+        "projectUniqueName": "C:\\Users\\YASH\\Source\\Repos\\DispurWirelessCommunicationManagment1\\DispurWirelessCommunicationManagment.csproj",
         "projectName": "DispurWirelessCommunicationManagment",
-        "projectPath": "D:\\dispurWireless\\DispurWirelessCommunicationManagment\\DispurWirelessCommunicationManagment.csproj",
-        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-        "outputPath": "D:\\dispurWireless\\DispurWirelessCommunicationManagment\\obj\\",
+        "projectPath": "C:\\Users\\YASH\\Source\\Repos\\DispurWirelessCommunicationManagment1\\DispurWirelessCommunicationManagment.csproj",
+        "packagesPath": "C:\\Users\\YASH\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\YASH\\Source\\Repos\\DispurWirelessCommunicationManagment1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\YASH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -62,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
