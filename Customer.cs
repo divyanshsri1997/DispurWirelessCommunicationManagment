@@ -32,7 +32,5 @@ namespace DispurWirelessCommunicationManagment
         }
     }
 
-    public static class Globals {
-        public static int id = 100;
-    }
+    
 }

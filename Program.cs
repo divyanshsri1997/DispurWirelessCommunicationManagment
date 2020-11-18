@@ -24,6 +24,7 @@ namespace DispurWirelessCommunicationManagment
                     case 2:
                         Console.WriteLine("--------------------------------------------------------------------------");
                         Console.WriteLine("Tariff Plan Management Portal...\n\n");
+                        new TarrifPlanManagementPortal();
                         Console.WriteLine("--------------------------------------------------------------------------");
                         break;
                     case 3:
@@ -45,5 +46,10 @@ namespace DispurWirelessCommunicationManagment
             }
             
         }
+    }
+    public static class Globals
+    {
+        public static int id = 100;
+        public static int pId = 500;
     }
 }
