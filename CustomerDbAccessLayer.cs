@@ -72,6 +72,130 @@ namespace DispurWirelessCommunicationManagment
                 con.Close();
             }
         }
+
+        public void RemoveCustomer(int rid)
+        {
+            SqlConnection con=null;
+
+            try
+            {
+                con = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Database=DispurWireless; integrated security=SSPI");
+
+                SqlCommand cmd = new SqlCommand("Delete from Customer where registrationId=@regId", con);
+                cmd.Parameters.AddWithValue("@regId", rid);
+                con.Open();
+                int i = cmd.ExecuteNonQuery();
+                Console.WriteLine("No of rows affected is = " + i);
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Oops, Something went wrong  :- " + e);
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+        public bool IdPasswordValidation(int regId, string passwordcheck)
+        {
+            SqlConnection con = null;
+            try
+            {
+                con = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Database=DispurWireless; integrated security=SSPI");
+
+                SqlCommand cmd = new SqlCommand("select * from Customer where registrationId=@regId and password=@passwordcheck", con);
+                cmd.Parameters.AddWithValue("@regId", regId);
+                cmd.Parameters.AddWithValue("@passwordcheck", passwordcheck);
+                con.Open();
+                SqlDataReader sdr = cmd.ExecuteReader();
+                if (sdr.Read())
+                {
+                    return true;
+                }
+                con.Close();
+                return false;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Oops, Something went wrong :- " + e);
+                return false;
+            }
+        }
+        public void UpdateData(int regId, string changedValue, int ch, long changeNum, string passwordcheck)
+        {
+            SqlConnection con = null;
+            con = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Database=DispurWireless; integrated security=SSPI");
+
+            try
+            {
+                if (ch == 1)
+                {
+                    SqlCommand cmd = new SqlCommand("update Customer set name=@name where registrationId=@regId and password=@passwordcheck", con);
+                    cmd.Parameters.AddWithValue("@name", changedValue);
+                    cmd.Parameters.AddWithValue("@regId", regId);
+                    cmd.Parameters.AddWithValue("@passwordcheck", passwordcheck);
+                    con.Open();
+                    int i = cmd.ExecuteNonQuery();
+                    //Console.WriteLine("No of rows affected is = " + i);
+                    Console.WriteLine("Name changed successfully");
+
+                }
+                else if (ch == 2)
+                {
+                    SqlCommand cmd = new SqlCommand("update Customer set address=@Address where registrationId=@regId and password=@passwordcheck", con);
+                    cmd.Parameters.AddWithValue("@Address", changedValue);
+                    cmd.Parameters.AddWithValue("@regId", regId);
+                    cmd.Parameters.AddWithValue("@passwordcheck", passwordcheck);
+                    con.Open();
+                    int i = cmd.ExecuteNonQuery();
+                    //Console.WriteLine("No of rows affected is = " + i);
+                    Console.WriteLine("Address changed successfully");
+                }
+                else if (ch == 3)
+                {
+                    SqlCommand cmd = new SqlCommand("update Customer set mailId=@mailId where registrationId=@regId and password=@passwordcheck", con);
+                    cmd.Parameters.AddWithValue("@mailId", changedValue);
+                    cmd.Parameters.AddWithValue("@regId", regId);
+                    cmd.Parameters.AddWithValue("@passwordcheck", passwordcheck);
+                    con.Open();
+                    int i = cmd.ExecuteNonQuery();
+                    //Console.WriteLine("No of rows affected is = " + i);
+                    Console.WriteLine("Email Id changed successfully");
+                }
+                else if (ch == 4)
+                {
+                    SqlCommand cmd = new SqlCommand("update Customer set password=@password where registrationId=@regId and password=@passwordcheck", con);
+                    cmd.Parameters.AddWithValue("@regId", regId);
+                    cmd.Parameters.AddWithValue("@password", changedValue);
+                    cmd.Parameters.AddWithValue("@passwordcheck", passwordcheck);
+                    con.Open();
+                    int i = cmd.ExecuteNonQuery();
+                    //Console.WriteLine("No of rows affected is = " + i);
+                    Console.WriteLine("Password changed successfully");
+                }
+                else
+                {
+                    SqlCommand cmd = new SqlCommand("update Customer set mob=@phoneNo where registrationId=@regId and password=@passwordcheck", con);
+                    cmd.Parameters.AddWithValue("@regId", regId);
+                    cmd.Parameters.AddWithValue("@phoneNo", changeNum);
+                    cmd.Parameters.AddWithValue("@passwordcheck", passwordcheck);
+                    con.Open();
+                    int i = cmd.ExecuteNonQuery();
+                    //Console.WriteLine("No of rows affected is = " + i);
+                    Console.WriteLine("Phone number changed successfully");
+                }
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Oops, Something went wrong :- " + e);
+            }
+            finally
+            {
+                con.Close();
+            }
+
+        }
     }
 }
-//Data Source = (localdb)\MSSQLLocalDB;Initial Catalog = ma
