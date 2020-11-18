@@ -1,9 +1,12 @@
 ﻿using System;
+using System.Data.SqlClient;
 
 namespace DispurWirelessCommunicationManagment
 {
     class Program
     {
+        
+       
         static void Main(string[] args)
         {
             while(true) {
@@ -12,8 +15,7 @@ namespace DispurWirelessCommunicationManagment
                 Console.WriteLine("Press 3 for Connection Management Portal...");
                 Console.WriteLine("Press 4 for Usage Management Portal...");
                 int choice = int.Parse(Console.ReadLine());
-
-                switch (choice)
+                    switch (choice)
                 {
                     case 1:
                         Console.WriteLine("--------------------------------------------------------------------------");
